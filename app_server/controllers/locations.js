@@ -1,6 +1,6 @@
 /* GET home page*/
 module.exports.homelist = function(req, res){
-    res.render('index', {title: 'Home'});  
+    res.render('location-list', {title: 'Loc8r'});  
   };
 
 /* GET Informações de localização*/
