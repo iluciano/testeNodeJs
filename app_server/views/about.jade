@@ -1,10 +1,16 @@
 extends layout
 
-block content 
- h1= title
- p Welcome to #{title}
- p É noix ...
-  div#divnova
-   p Footer é aqui
-  div.col-xs-12.col-sm-6.text-center
-   p.text-uppercase Essa tem classe 
+block content
+ div.row 
+  h1= title
+ div.row
+  h2 Welcome to #{title}
+ div.row
+  p Exemplo de parágrafo
+ div.row
+  div.col-xs-12.col-sm-3.text-center
+   p.text-uppercase Coluna 01
+  div.col-xs-12.col-sm-3.text-center
+   p.text-uppercase Coluna 02 
+  div.col-xs-12.col-sm-3.text-center
+   p.text-uppercase Coluna 03        

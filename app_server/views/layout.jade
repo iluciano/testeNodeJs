@@ -11,14 +11,19 @@ html
      .container
       .navbar-header
        a.navbar-brand(href='/') Loc8r
-      button.navbar-toggle(type='button', data-toggle='collapse', data-target='#navbar-main')
-       span.icon-bar
-       span.icon-bar
-       span.icon-bar
-    #navbar-main.navbar-collapse.collapse
-     ul.nav.navbar-nav
-      li
-       a(href='/about/') About
-    block content
+       button.navbar-toggle(type='button', data-toggle='collapse', data-target='#navbar-main')
+        span.icon-bar
+        span.icon-bar
+        span.icon-bar
+      #navbar-main.navbar-collapse.collapse
+       ul.nav.navbar-nav
+        li
+         a(href='/about/') Sobre Nós
+    .container   
+     block content
+     footer
+      .row
+       .col-xs-12
+        small &copy; Igor Luciano 2017
     script(src='/javascripts/jquery-3.2.1.min.js')
     script(src='/bootstrap/js/bootstrap.min.js')
