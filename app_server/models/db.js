@@ -14,9 +14,8 @@ if(process.platform === "win32"){
         process.emit("SIGINT");
     });
 };
-
 mongoose.connection.on('connected', function(){
-    console.log('Mongoose conectando a ' + dbURI);
+    console.log('Mongoose conectado a ' + dbURI);
 });
 mongoose.connection.on('error', function(err){
     console.log('Mongoose erro de conexão: ' + err);
@@ -24,14 +23,12 @@ mongoose.connection.on('error', function(err){
 mongoose.connection.on('disconnected', function(){
     console.log('Mongoose desconectado');
 });
-
 gracefulShutdown = function(msg, callback){
     mongoose.connection.close(function(){
         console.log('Mongoose desconectado ' + msg);
         callback();
     });
 };
-
 process.on('SIGUSR2', function(){
     gracefulShutdown('nodemon restart', function(){
         process.kill(process.pid, 'SIGUSR2');
